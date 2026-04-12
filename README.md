@@ -60,11 +60,14 @@ Or install them somewhere else:
 ```bash
 ./scripts/bootstrap_project.sh \
   --project-dir /path/to/paper \
-  --paper-name "PACT" \
+  --paper-name "Your Paper Name" \
   --manuscript main.tex \
   --bibliography references.bib \
   --figures-dir figures
 ```
+
+Replace `"Your Paper Name"` with the actual paper or project name for that
+workspace.
 
 4. Merge the generated `.paper-os/AGENTS.update.md` snippet into the paper project's `AGENTS.md`.
 5. Use the role-specific skills as needed:
