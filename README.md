@@ -4,11 +4,14 @@ Reusable local skills and project-state templates for paper writing workflows.
 
 ## Design note
 
-This repo was designed after reviewing the user's attached paper at
-`/Users/5d0ng/Downloads/2604.05018v1.pdf`, especially the Appendix F
-paper-writing workflow split. The implementation here does not copy that
-paper's prompts verbatim. Instead, it adapts the role split into a reusable
-local-skill architecture:
+This repo was designed after reviewing *PaperOrchestra: A Multi-Agent
+Framework for Automated AI Research Paper Writing*, a Google Cloud AI Research
+paper. The main public reference used here is the authors' project page:
+
+- [PaperOrchestra project page](https://yiwen-song.github.io/paper_orchestra/)
+
+The implementation here does not copy that paper's prompts verbatim. Instead,
+it adapts the Appendix F role split into a reusable local-skill architecture:
 
 - shared workflow logic lives in installable skills
 - per-paper memory lives in project-local `.paper-os/` state files
@@ -19,6 +22,12 @@ The structure is intentionally inspired by the paper's reported results: the
 multi-agent PaperOrchestra pipeline beat its Single Agent baseline by large
 margins on literature-review quality and overall paper quality, so this repo
 now mirrors that role split instead of keeping only one generic writing agent.
+
+More specifically, the author page describes a pipeline in which specialized
+agents handle outline planning, literature discovery, plotting, section
+writing, and iterative refinement. This repo reuses that decomposition idea,
+but implements it as local installable skills plus project-local `.paper-os/`
+state.
 
 ## What this repo contains
 
