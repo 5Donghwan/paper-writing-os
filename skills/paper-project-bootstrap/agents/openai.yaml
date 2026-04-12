@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Project Bootstrap"
+  short_description: "Initialize .paper-os state for a paper repo."
+  default_prompt: "Use $paper-project-bootstrap to initialize .paper-os state files for this paper workspace."
+
+policy:
+  allow_implicit_invocation: true
