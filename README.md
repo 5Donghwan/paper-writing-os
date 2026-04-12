@@ -2,6 +2,19 @@
 
 Reusable local skills and project-state templates for paper writing workflows.
 
+## Design note
+
+This repo was designed after reviewing the user's attached paper at
+`/Users/5d0ng/Downloads/2604.05018v1.pdf`, especially the Appendix F
+paper-writing workflow split. The implementation here does not copy that
+paper's prompts verbatim. Instead, it adapts the role split into a reusable
+local-skill architecture:
+
+- shared workflow logic lives in installable skills
+- per-paper memory lives in project-local `.paper-os/` state files
+- long-lived workspace rules are surfaced through a generated `AGENTS.md`
+  update snippet
+
 ## What this repo contains
 
 - `paper-writing-os`: the main skill for running a paper-writing workflow from local project state
