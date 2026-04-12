@@ -9,11 +9,17 @@ Expected `.paper-os/` files:
 - `evidence_log.md`
   - measured results, source paths, stale/pending flags
 - `outline.json`
-  - section structure, ownership, and drafting status
+  - section structure, ownership, and drafting status for the main body
+- `intro_related_work_plan.json`
+  - intro hook, problem gap, related-work clusters, and search plan
+- `plotting_plan.json`
+  - figure inventory, purpose, source path, and caption status
 - `citation_map.json`
   - related-work buckets, must-cite items, cutoff rules
 - `reviewer_feedback.json`
   - structured reviewer comments and revision targets
+- `worklog.json`
+  - structured history of revision actions
 - `writing_status.md`
   - active phase, last completed work, next edits, open risks
 - `AGENTS.update.md`

@@ -14,13 +14,18 @@
 3. `outline`
    - map the narrative arc section by section
    - assign each section a purpose and evidence dependency
-4. `drafting`
+   - split the planning state across `outline.json`,
+     `intro_related_work_plan.json`, and `plotting_plan.json`
+4. `literature`
+   - write or revise Introduction and Related Work from the dedicated plan
+5. `drafting`
    - write or revise sections against the outline and evidence log
-5. `figures`
+6. `figures`
    - plan or update figures, captions, and figure references
-6. `refinement`
+7. `refinement`
    - respond to reviewer comments
    - tighten claims, caveats, and related work
+   - record revision actions in `worklog.json`
 
 ## Minimal discipline
 

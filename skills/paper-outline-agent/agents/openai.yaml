@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Outline Agent"
+  short_description: "Plan sections, literature, and figure strategy."
+  default_prompt: "Use $paper-outline-agent to update the paper plan from the existing .paper-os state."
+
+policy:
+  allow_implicit_invocation: true

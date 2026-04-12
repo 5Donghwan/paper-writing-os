@@ -15,10 +15,20 @@ local-skill architecture:
 - long-lived workspace rules are surfaced through a generated `AGENTS.md`
   update snippet
 
+The structure is intentionally inspired by the paper's reported results: the
+multi-agent PaperOrchestra pipeline beat its Single Agent baseline by large
+margins on literature-review quality and overall paper quality, so this repo
+now mirrors that role split instead of keeping only one generic writing agent.
+
 ## What this repo contains
 
-- `paper-writing-os`: the main skill for running a paper-writing workflow from local project state
+- `paper-writing-os`: the orchestration skill for running a paper-writing workflow from local project state
 - `paper-project-bootstrap`: a bootstrap skill for initializing per-paper state files and an `AGENTS.md` update snippet
+- `paper-outline-agent`: planning skill for section structure, literature-search plan, and figure plan
+- `paper-plotting-agent`: figure planning and caption refinement skill
+- `paper-literature-review-agent`: intro and related-work writing skill
+- `paper-section-writing-agent`: core manuscript drafting skill for non-intro sections
+- `paper-content-refinement-agent`: reviewer-driven revision skill
 - `scripts/install_local_skills.sh`: symlinks the repo's skills into `~/.agents/skills` by default
 
 ## Quick start
@@ -48,14 +58,30 @@ Or install them somewhere else:
 ```
 
 4. Merge the generated `.paper-os/AGENTS.update.md` snippet into the paper project's `AGENTS.md`.
-5. Use the `paper-writing-os` skill inside that paper workspace.
+5. Use the role-specific skills as needed:
+
+```text
+paper-outline-agent
+paper-plotting-agent
+paper-literature-review-agent
+paper-section-writing-agent
+paper-content-refinement-agent
+```
+
+6. Use `paper-writing-os` when you want one orchestration layer to choose the
+next role from `.paper-os` state.
 
 ## Repo layout
 
 ```text
 skills/
+  paper-content-refinement-agent/
+  paper-literature-review-agent/
+  paper-outline-agent/
   paper-writing-os/
   paper-project-bootstrap/
+  paper-plotting-agent/
+  paper-section-writing-agent/
 scripts/
   install_local_skills.sh
 ```

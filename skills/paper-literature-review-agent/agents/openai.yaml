@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Literature Agent"
+  short_description: "Write Introduction and Related Work only."
+  default_prompt: "Use $paper-literature-review-agent to revise the Introduction and Related Work from the .paper-os plan."
+
+policy:
+  allow_implicit_invocation: true

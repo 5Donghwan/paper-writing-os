@@ -11,5 +11,7 @@ This is intentional:
 Recommended follow-up:
 
 - keep project-specific truth in `.paper-os/`
+- split role-specific planning across `outline.json`,
+  `intro_related_work_plan.json`, `plotting_plan.json`, and `worklog.json`
 - keep reusable logic in the shared skill repo
 - merge the generated `AGENTS.update.md` content into the workspace `AGENTS.md` rather than trying to source it dynamically

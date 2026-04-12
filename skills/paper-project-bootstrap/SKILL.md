@@ -33,8 +33,11 @@ Optional flags:
 - `.paper-os/claim_scope.md`
 - `.paper-os/evidence_log.md`
 - `.paper-os/outline.json`
+- `.paper-os/intro_related_work_plan.json`
+- `.paper-os/plotting_plan.json`
 - `.paper-os/citation_map.json`
 - `.paper-os/reviewer_feedback.json`
+- `.paper-os/worklog.json`
 - `.paper-os/writing_status.md`
 - `.paper-os/AGENTS.update.md`
 
