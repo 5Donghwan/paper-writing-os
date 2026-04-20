@@ -29,6 +29,18 @@ writing, and iterative refinement. This repo reuses that decomposition idea,
 but implements it as local installable skills plus project-local `.paper-os/`
 state.
 
+The repo now also includes a ScholarPeer-style reviewer/auditor subsystem,
+inspired by *ScholarPeer: A Collaborative Multi-Agent System for Automated
+Scientific Peer Review*:
+
+- [ScholarPeer arXiv page](https://arxiv.org/html/2601.22638v1)
+
+This subsystem is intentionally separated from the writer loop. It audits
+claims, baselines, literature coverage, figures, tables, and novelty framing,
+then records structured findings for the refinement agent to address. It does
+not directly upgrade claims, add citations, or rewrite the manuscript without a
+follow-on writing step.
+
 ## What this repo contains
 
 - `paper-writing-os`: the orchestration skill for running a paper-writing workflow from local project state
@@ -37,6 +49,7 @@ state.
 - `paper-plotting-agent`: figure planning and caption refinement skill
 - `paper-literature-review-agent`: intro and related-work writing skill
 - `paper-section-writing-agent`: core manuscript drafting skill for non-intro sections
+- `paper-review-auditor-agent`: ScholarPeer-style audit skill for claims, baselines, literature gaps, and reviewer-style findings
 - `paper-content-refinement-agent`: reviewer-driven revision skill
 - `scripts/install_local_skills.sh`: symlinks the repo's skills into `~/.agents/skills` by default
 
@@ -77,6 +90,7 @@ paper-outline-agent
 paper-plotting-agent
 paper-literature-review-agent
 paper-section-writing-agent
+paper-review-auditor-agent
 paper-content-refinement-agent
 ```
 
@@ -93,6 +107,7 @@ skills/
   paper-writing-os/
   paper-project-bootstrap/
   paper-plotting-agent/
+  paper-review-auditor-agent/
   paper-section-writing-agent/
 scripts/
   install_local_skills.sh

@@ -1,6 +1,6 @@
 ---
 name: paper-writing-os
-description: Reusable operating workflow for managing a research paper from local project state files. Use when a paper workspace has a `.paper-os/` directory and the task involves outlining, literature review, drafting, figure/table planning, reviewer-response refinement, or claim/evidence alignment.
+description: Reusable operating workflow for managing a research paper from local project state files. Use when a paper workspace has a `.paper-os/` directory and the task involves outlining, literature review, drafting, figure/table planning, reviewer or auditor checks, reviewer-response refinement, or claim/evidence alignment.
 ---
 
 # Paper Writing OS
@@ -28,6 +28,8 @@ Read these additional files when the task touches them:
   `.paper-os/citation_map.json`
 - reviewer comments or revision planning:
   `.paper-os/reviewer_feedback.json`
+- internal reviewer/auditor findings:
+  `.paper-os/review_audit.json`
 - revision history:
   `.paper-os/worklog.json`
 - structure or section ownership:
@@ -43,6 +45,8 @@ For the workflow and file semantics, read:
 - Treat `.paper-os/evidence_log.md` as the source of truth for numeric claims unless the user explicitly overrides it with newer evidence.
 - Do not invent experiments, metrics, citations, or reviewer feedback.
 - Keep the paper's strongest claim inside the boundary documented in `.paper-os/claim_scope.md`.
+- Treat reviewer/auditor findings as advisory until they are grounded in
+  evidence, verified citations, or explicit user decisions.
 - Before editing the manuscript, map the requested change to the relevant state files so the write is grounded in project context.
 - After substantial work, update `.paper-os/writing_status.md` with completed work, open risks, and next actions.
 
@@ -54,6 +58,9 @@ Prefer the specialized skills when the task is clearly role-scoped:
 - `paper-plotting-agent`: figure planning, caption writing, figure-to-text consistency
 - `paper-literature-review-agent`: Introduction and Related Work only
 - `paper-section-writing-agent`: Method, Experiments, Conclusion, Appendix, tables
+- `paper-review-auditor-agent`: ScholarPeer-style audit for unsupported claims,
+  missing baselines, literature gaps, figure/table consistency, and
+  reviewer-style findings
 - `paper-content-refinement-agent`: reviewer-driven revision and rebuttal-via-revision
 
 Use `paper-writing-os` itself when the task spans multiple roles or when the
@@ -68,7 +75,8 @@ next step.
 4. Literature review or intro framing
 5. Draft or revise target sections
 6. Check figures, tables, and citations
-7. Refinement and status recording
+7. Run reviewer/auditor checks when critique or pre-submission risk reduction is needed
+8. Refinement and status recording
 
 ## Output preference
 

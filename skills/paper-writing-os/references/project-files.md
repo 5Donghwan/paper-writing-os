@@ -18,6 +18,9 @@ Expected `.paper-os/` files:
   - related-work buckets, must-cite items, cutoff rules
 - `reviewer_feedback.json`
   - structured reviewer comments and revision targets
+- `review_audit.json`
+  - internal reviewer/auditor findings, missing-baseline checks, claim-evidence
+    gaps, and pending literature verification
 - `worklog.json`
   - structured history of revision actions
 - `writing_status.md`

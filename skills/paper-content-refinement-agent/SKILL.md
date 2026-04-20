@@ -13,9 +13,10 @@ Use this skill for reviewer-driven revisions and rebuttal-via-revision.
 2. `.paper-os/claim_scope.md`
 3. `.paper-os/evidence_log.md`
 4. `.paper-os/reviewer_feedback.json`
-5. `.paper-os/worklog.json`
-6. `.paper-os/writing_status.md`
-7. `.paper-os/citation_map.json`
+5. `.paper-os/review_audit.json` if it exists
+6. `.paper-os/worklog.json`
+7. `.paper-os/writing_status.md`
+8. `.paper-os/citation_map.json`
 
 Read the manuscript path named in `paper_os_config.yaml`.
 
@@ -27,6 +28,8 @@ Read the manuscript path named in `paper_os_config.yaml`.
   evidence log.
 - If feedback asks for unsupported new results, record the gap but do not claim
   the result exists.
+- Treat reviewer/auditor findings as prompts for verification and revision, not
+  as evidence by themselves.
 - Preserve the paper's strengths while tightening weak sections.
 - Append a concise structured record of changes to `.paper-os/worklog.json`.
 - After substantial revisions, update `.paper-os/writing_status.md`.
