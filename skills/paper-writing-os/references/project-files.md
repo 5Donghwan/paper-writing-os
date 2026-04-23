@@ -14,6 +14,9 @@ Expected `.paper-os/` files:
   - intro hook, problem gap, related-work clusters, and search plan
 - `plotting_plan.json`
   - figure inventory, purpose, source path, and caption status
+- `illustration_plan.json`
+  - generation-specific state for explicit image synthesis requests, including
+    style guidance, prompt drafts, review status, and output paths
 - `citation_map.json`
   - related-work buckets, must-cite items, cutoff rules
 - `reviewer_feedback.json`

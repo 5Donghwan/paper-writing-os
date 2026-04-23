@@ -35,6 +35,7 @@ Optional flags:
 - `.paper-os/outline.json`
 - `.paper-os/intro_related_work_plan.json`
 - `.paper-os/plotting_plan.json`
+- `.paper-os/illustration_plan.json`
 - `.paper-os/citation_map.json`
 - `.paper-os/review_audit.json`
 - `.paper-os/reviewer_feedback.json`
@@ -46,6 +47,8 @@ After running the script:
 
 1. Fill in the generated placeholders, especially in `claim_scope.md` and `evidence_log.md`.
 2. Merge `.paper-os/AGENTS.update.md` into the project `AGENTS.md`.
-3. Use the `paper-writing-os` skill in that workspace.
+3. Keep `plotting_plan.json` for figure planning and use `illustration_plan.json`
+   only when the project needs explicit generated figures.
+4. Use the `paper-writing-os` skill in that workspace.
 
 For the generated layout, read `references/project-layout.md`.

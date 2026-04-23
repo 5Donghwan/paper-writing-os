@@ -1,7 +1,7 @@
 interface:
   display_name: "Paper Plotting Agent"
   short_description: "Plan figures and refine academic captions."
-  default_prompt: "Use $paper-plotting-agent to align figures and captions with the evidence in .paper-os."
+  default_prompt: "Use $paper-plotting-agent to decide what to draw, align figures and captions with the evidence in .paper-os, and leave explicit image generation to the illustration agent."
 
 policy:
   allow_implicit_invocation: true

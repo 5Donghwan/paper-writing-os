@@ -1,0 +1,7 @@
+interface:
+  display_name: "PaperBanana Illustration Agent"
+  short_description: "Generate methodology-style paper figures when image generation is explicitly requested."
+  default_prompt: "Use $paperbanana-illustration-agent only when the user explicitly asks for image generation or `image_gen`, and keep planning separate from generation by grounding the output in .paper-os plotting and illustration state."
+
+policy:
+  allow_implicit_invocation: true

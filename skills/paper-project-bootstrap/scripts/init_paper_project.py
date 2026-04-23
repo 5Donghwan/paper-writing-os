@@ -79,7 +79,8 @@ def main() -> int:
     print("next_steps:")
     print("  1. Fill in claim_scope.md and evidence_log.md")
     print("  2. Merge .paper-os/AGENTS.update.md into the project AGENTS.md")
-    print("  3. Use the paper-writing-os skill in that workspace")
+    print("  3. Keep plotting_plan.json for figure planning and illustration_plan.json for explicit generated figures")
+    print("  4. Use the paper-writing-os skill in that workspace")
     return 0
 
 

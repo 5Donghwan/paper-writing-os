@@ -6,7 +6,8 @@ description: Plan or refine paper figures and captions. Use when deciding which 
 # Paper Plotting Agent
 
 Use this skill for figure planning, caption writing, and visual consistency
-checks.
+checks. It is planning-oriented and should not be the default place to trigger
+image generation.
 
 ## First read
 
@@ -23,6 +24,10 @@ captions or references need to be checked against existing content.
 - Every figure must map to a concrete claim or explanatory need.
 - Do not infer results that are not visible in the figure or present in the
   evidence log.
+- Treat `plotting_plan.json` as the planning layer. If the user explicitly asks
+  for `"그림 생성"` or `image_gen`, route that execution step to
+  `paperbanana-illustration-agent` instead of folding generation into this
+  skill by default.
 - Use exact figure filenames when editing manuscript references.
 - Caption text should not include `Figure X`.
 - Prefer refining `plotting_plan.json` first, then update manuscript captions or

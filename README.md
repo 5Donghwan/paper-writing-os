@@ -41,12 +41,21 @@ then records structured findings for the refinement agent to address. It does
 not directly upgrade claims, add citations, or rewrite the manuscript without a
 follow-on writing step.
 
+The repo also supports a split between figure planning and figure generation.
+`paper-plotting-agent` remains planning-only: it decides what to draw, why the
+visual is needed, and how the caption should align with the manuscript.
+When a user explicitly asks for "image_gen" or "그림 생성", a separate
+`paperbanana-illustration-agent` can take the existing plan and use Codex's
+image generation tool to produce methodology-style illustrations without
+changing the default behavior of the plotting workflow.
+
 ## What this repo contains
 
 - `paper-writing-os`: the orchestration skill for running a paper-writing workflow from local project state
 - `paper-project-bootstrap`: a bootstrap skill for initializing per-paper state files and an `AGENTS.md` update snippet
 - `paper-outline-agent`: planning skill for section structure, literature-search plan, and figure plan
 - `paper-plotting-agent`: figure planning and caption refinement skill
+- `paperbanana-illustration-agent`: explicit image-generation skill for methodology-style figures using Codex `image_gen`
 - `paper-literature-review-agent`: intro and related-work writing skill
 - `paper-section-writing-agent`: core manuscript drafting skill for non-intro sections
 - `paper-review-auditor-agent`: ScholarPeer-style audit skill for claims, baselines, literature gaps, and reviewer-style findings
@@ -88,6 +97,7 @@ workspace.
 ```text
 paper-outline-agent
 paper-plotting-agent
+paperbanana-illustration-agent
 paper-literature-review-agent
 paper-section-writing-agent
 paper-review-auditor-agent
@@ -104,6 +114,7 @@ skills/
   paper-content-refinement-agent/
   paper-literature-review-agent/
   paper-outline-agent/
+  paperbanana-illustration-agent/
   paper-writing-os/
   paper-project-bootstrap/
   paper-plotting-agent/

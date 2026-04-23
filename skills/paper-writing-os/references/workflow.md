@@ -22,6 +22,9 @@
    - write or revise sections against the outline and evidence log
 6. `figures`
    - plan or update figures, captions, and figure references
+   - keep planning in `plotting_plan.json`
+   - use `illustration_plan.json` only when the user explicitly asks for image
+     generation or generated methodology diagrams
 7. `audit`
    - run ScholarPeer-style reviewer checks without directly rewriting the paper
    - flag unsupported claims, missing baselines, related-work gaps, and

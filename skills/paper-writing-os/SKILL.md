@@ -22,6 +22,8 @@ Read these additional files when the task touches them:
   `.paper-os/evidence_log.md`
 - figure planning or captions:
   `.paper-os/plotting_plan.json`
+- explicit illustration generation, style prompts, or generated figure review:
+  `.paper-os/illustration_plan.json`
 - intro framing or related-work search structure:
   `.paper-os/intro_related_work_plan.json`
 - citations, related work, or bibliography hygiene:
@@ -55,7 +57,10 @@ For the workflow and file semantics, read:
 Prefer the specialized skills when the task is clearly role-scoped:
 
 - `paper-outline-agent`: section hierarchy, intro/related-work search strategy, figure plan
-- `paper-plotting-agent`: figure planning, caption writing, figure-to-text consistency
+- `paper-plotting-agent`: figure planning, caption writing, figure-to-text consistency; do not use it as the default image generator
+- `paperbanana-illustration-agent`: use only when the user explicitly asks for
+  `"그림 생성"` or `image_gen`, or clearly requests a generated methodology-style
+  figure from the existing plan
 - `paper-literature-review-agent`: Introduction and Related Work only
 - `paper-section-writing-agent`: Method, Experiments, Conclusion, Appendix, tables
 - `paper-review-auditor-agent`: ScholarPeer-style audit for unsupported claims,
@@ -74,9 +79,11 @@ next step.
 3. Outline or section planning
 4. Literature review or intro framing
 5. Draft or revise target sections
-6. Check figures, tables, and citations
-7. Run reviewer/auditor checks when critique or pre-submission risk reduction is needed
-8. Refinement and status recording
+6. Plan figures, captions, and references
+7. Generate illustrations only when the user explicitly asks for generated figures
+8. Check figures, tables, and citations
+9. Run reviewer/auditor checks when critique or pre-submission risk reduction is needed
+10. Refinement and status recording
 
 ## Output preference
 
