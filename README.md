@@ -49,6 +49,17 @@ When a user explicitly asks for "image_gen" or "그림 생성", a separate
 image generation tool to produce methodology-style illustrations without
 changing the default behavior of the plotting workflow.
 
+This optional illustration-generation path is inspired by *PaperBanana:
+Automating Academic Illustration for AI Scientists*:
+
+- [PaperBanana project page](https://papersbanana.com/)
+- [PaperBanana arXiv paper](https://arxiv.org/abs/2601.23265)
+
+As with the rest of this repo, the implementation here does not copy the
+paper's prompts verbatim. Instead, it adapts the reported workflow shape into a
+local-skill split that keeps figure planning separate from explicit image
+generation.
+
 ## What this repo contains
 
 - `paper-writing-os`: the orchestration skill for running a paper-writing workflow from local project state
